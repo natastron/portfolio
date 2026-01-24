@@ -37,4 +37,56 @@ height: 24px;
 .header{
     display: flex;
     align-items: center;
+    padding: 70px 0px;
+}
+.header-text{
+    margin-left: 27px;
+
+}
+.header-strong{
+font-weight: 700;
+line-height: 125%;
+font-size: 48px;
+}
+.heder-heding{
+font-size: 24px;
+font-weight: 700;
+line-height: 135%;
+letter-spacing: -2%;
+text-align: left;
+margin-top: 8px;
+margin-bottom: 24px;
+}
+.header-primary{
+    color:rgba(191, 117, 6, 1)
+}
+.social-list{
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+    align-items: center;
+}
+.social-link{
+    display: inline-block;
+    padding: 8px;
+}
+.header-links{
+    display: flex;
+    align-items: center;
+}
+.cv-download{
+    margin-left: 55px;
+    display: flex;
+    padding: 7px 8px;
+    align-items: center;
+    text-decoration: none;
+width: 179px;
+height: 40px;
+color: rgba(33, 27, 18, 1);
+line-height: 150%;
+font-size: 16px;
+border-bottom: 2px solid #BF7506;
+}
+.sv-icon{
+    margin-right: 4px;
 }
