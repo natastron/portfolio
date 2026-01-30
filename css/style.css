@@ -1,3 +1,6 @@
+*{
+    box-sizing: border-box;
+}
 body{  
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
@@ -99,6 +102,7 @@ letter-spacing:-0.03em;
 }
 .card{
     max-width: 400px;
+    margin-bottom: 40px;
 }
 .card-text{
 color: var(--Neutral/900, rgba(33, 27, 18, 1));
@@ -154,11 +158,9 @@ margin-bottom: 4px;
 .card-buttons{
     display: flex;
     align-items: center;
-
-
 }
 .card-button{
-display: inline-flex;
+display: flex;
 align-items: center;
 padding: 7px 8px;
 text-decoration: none;
@@ -176,4 +178,125 @@ margin-right: 25px;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+}
+.developer{
+    display: flex;/*чтоб текст находился справа, а картинка слева*/
+    align-items: center;
+    padding: 80px 0 20px;
+
+}
+.developer-photo{
+width: 360px; /* ширина*/
+height: 440px; /*высота*/ 
+flex-shrink: 0; /*Чтоб картинка не уменьшалась*/
+object-fit: cover; /*Чтоб картинку не плющело*/
+border-radius: 20px; /*Скругление углов на 20px*/
+} 
+.developer-about{
+    margin-left: 55px; /*текст отступает от картинки на 55px*/
+
+}
+.developer-hello{
+width: 454px;
+height: 32px;
+color:  rgba(33, 27, 18, 1);
+font-size: 24px;
+font-weight: 400;
+line-height: 135%;
+letter-spacing: -2%;
+text-align: left;
+}
+.developer-title{
+width: 454px;
+height: 40px;
+color:  rgba(191, 117, 6, 1);
+font-size: 32px;
+font-weight: 700;
+line-height: 125%;
+text-align: left;/*выравнивает текст в контейнере СЛЕВА!*/
+margin-bottom: 4px;/* отступ снизу элемента 4px*/
+margin-top: 4px;/*отступ сверху элемента 4px*/
+}
+.developer-text{
+color: var(--Neutral/900, rgba(33, 27, 18, 1));
+font-size: 16px;
+line-height: 150%;
+text-align: left;
+}
+.motto{
+color:  rgba(221, 156, 60, 1);
+font-size: 24px;
+line-height: 150%;
+text-align: left;
+margin: 16px 0;/* отступ снизу элемента 16px по краям 0*/
+}
+.developer-sign{
+    max-width: 200px; /*Ширина 200px*/
+}
+.skills{
+ margin-top: 20px;
+margin-bottom: 3px;
+}
+.skill-title[
+color: var(--Neutral/900, rgba(33, 27, 18, 1));
+font-size: 24px;
+font-weight: 700;
+line-height: 135%;
+text-align: left;
+]
+feedback{
+    padding: 80px 0 160px;
+}
+.input-group{
+    position: relative; /**/
+    margin-bottom: 24px;
+}
+.input-label{
+position: absolute;
+color: rgba(131, 128, 124, 1);
+font-size: 16px;
+font-weight: 400;
+line-height: 150%;
+text-align: left;
+padding: 0 8px;/*сверху 0 отступ, по бокам 8px*/
+background: rgba(255, 255, 255, 1);
+top: 0;
+left: 16px;
+}
+.input-group{
+    padding-top: 9px;
+}
+.input{
+box-sizing: border-box;
+border: 3px solid var(--Neutral/100, rgba(224, 222, 220, 1));
+border-radius: 4px;
+width: 435px;
+height: 67px;
+}
+.textarea{
+    min-height: 140px;
+}
+.form-container{
+    max-width: 435px;
+    margin: auto;
+
+}
+.submit-button{
+display: flex;
+padding: 7px 8px;
+    align-items: center;
+    text-decoration: none;
+width: 179px;
+height: 40px;
+color: rgba(33, 27, 18, 1);
+border: none;
+line-height: 150%;
+font-size: 16px;
+border-bottom: 2px solid #BF7506;
+background-color: #fff;
+cursor: pointer;
+}
+.button-group{
+    display: flex;
+    justify-content: flex-end;
 }
