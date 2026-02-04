@@ -51,11 +51,10 @@ font-weight: 700;
 line-height: 125%;
 font-size: 48px;
 }
-.heder-heding{
+.header-heading{
 font-size: 24px;
 font-weight: 700;
 line-height: 135%;
-letter-spacing: -2%;
 text-align: left;
 margin-top: 8px;
 margin-bottom: 24px;
@@ -179,6 +178,9 @@ margin-right: 25px;
     align-items: flex-start;
     justify-content: space-between;
 }
+.card-image{
+    max-width: 100%; /*чтоб картинка не вываливалась из размеров карточек*/
+}
 .developer{
     display: flex;/*чтоб текст находился справа, а картинка слева*/
     align-items: center;
@@ -237,19 +239,29 @@ margin: 16px 0;/* отступ снизу элемента 16px по краям 
  margin-top: 20px;
 margin-bottom: 3px;
 }
-.skill-title[
+.skill-title{
 color: var(--Neutral/900, rgba(33, 27, 18, 1));
 font-size: 24px;
 font-weight: 700;
 line-height: 135%;
 text-align: left;
-]
-feedback{
+}
+.feedback{
+    position: relative; /*Когда нам нужно сдвинуть элемент выше нижевправо влево, но при этом другие элементы находятся на своих местах, далее используется, для самого элемента position: absolute и затем указываем где именно должна стоять в нашем случае справа top/left/right/bottom*/
     padding: 80px 0 160px;
+}
+.feedback-hand{
+    position: absolute;/**/
+    right: 0;
+    width: 30%;
+    top: 30%;
+
 }
 .input-group{
     position: relative; /**/
     margin-bottom: 24px;
+    padding-top: 9px;
+
 }
 .input-label{
 position: absolute;
@@ -263,9 +275,7 @@ background: rgba(255, 255, 255, 1);
 top: 0;
 left: 16px;
 }
-.input-group{
-    padding-top: 9px;
-}
+
 .input{
 box-sizing: border-box;
 border: 3px solid var(--Neutral/100, rgba(224, 222, 220, 1));
@@ -284,8 +294,8 @@ height: 67px;
 .submit-button{
 display: flex;
 padding: 7px 8px;
-    align-items: center;
-    text-decoration: none;
+align-items: center;
+text-decoration: none;
 width: 179px;
 height: 40px;
 color: rgba(33, 27, 18, 1);
@@ -299,4 +309,60 @@ cursor: pointer;
 .button-group{
     display: flex;
     justify-content: flex-end;
+}
+.from{
+    color: rgba(131, 128, 124, 1);
+font-size: 16px;
+font-weight: 400;
+line-height: 150%;
+letter-spacing: 0%;
+text-align: center;
+}
+.feedback-title{
+    margin-top: 120px;
+}
+@media(max-width: 1024px){
+    .container{
+    max-width: 760px
+    }
+    .card{
+        max-width: 350px;
+    }
+}
+@media(max-width:790px ){
+    .container{
+    max-width: 550px
+    }
+    .card{
+        max-width: 350px;
+    }
+    .header-photo{
+        max-width: 150px;
+    }
+    .header-strong{
+        font-size: 36px;
+    }
+    .header-heading{
+        font-size: 16px;
+    }
+    .cv-download{
+        margin-left: 15px;
+    }
+    .card{
+        max-width: 45%;
+    }
+    .card-text-wrapper{
+        padding: 8px 0;
+    }
+    .developer{
+        flex-direction: column; /*Поменяй очередность, сперва фотка, затем текст*/
+    }
+    .developer-photo{
+        width: 75%;
+        height: 350;
+        margin-bottom: 30px;
+    }
+    .developer-about{
+        padding-left: 15px;
+    }
 }
