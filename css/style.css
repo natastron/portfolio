@@ -12,6 +12,7 @@ body{
   font-weight: 700;
 }
 .navbar{
+    padding-top: 40px; /*отступ сверху 40px*/
     display:flex;
 align-items: center;
 justify-content: space-between;
@@ -151,8 +152,8 @@ box-sizing: border-box;
 border: 1px solid rgba(221, 156, 60, 1);
 border-radius: 4px;
 background: rgba(255, 255, 255, 1);
-margin-right: 4px;
-margin-bottom: 4px;
+margin-right: 4px; /*отступ справа*/
+margin-bottom: 4px; /*отступ снизу*/
 }
 .card-buttons{
     display: flex;
@@ -280,7 +281,7 @@ left: 16px;
 box-sizing: border-box;
 border: 3px solid var(--Neutral/100, rgba(224, 222, 220, 1));
 border-radius: 4px;
-width: 435px;
+width: 100%;
 height: 67px;
 }
 .textarea{
@@ -337,13 +338,14 @@ text-align: center;
         max-width: 350px;
     }
     .header-photo{
-        max-width: 150px;
+        max-width: 200px;
     }
     .header-strong{
         font-size: 36px;
     }
     .header-heading{
         font-size: 16px;
+
     }
     .cv-download{
         margin-left: 15px;
@@ -359,10 +361,51 @@ text-align: center;
     }
     .developer-photo{
         width: 75%;
-        height: 350;
+        height: 350px;
         margin-bottom: 30px;
     }
     .developer-about{
         padding-left: 15px;
+    }
+    .feedback-hand{
+        display: none;
+    }
+}
+@media(max-width:620px ){
+    .container{
+    max-width: 90%
+    }
+    .navbar, .cards, .header-links {
+        flex-direction: column /*Поменяй очередность, сперва фотка, затем текст*/
+    }
+    header{
+        padding-top: 33px;
+       flex-direction: column; /*Поменяй очередность, сперва фотка, затем текст*/
+       text-align: center; /*текст по центру*/ 
+    }
+    .cards{
+        gap: 30px;
+    }
+    .cv-download{
+        margin-left: 0;
+    }
+    .tags{
+        flex-wrap: wrap;/*перенеси на новую строчку*/
+    }
+    .card{
+        max-width: 100%;
+    }
+}
+@media(max-width:480px ){
+    .from{
+        width: 90%;
+    }
+    .nav-list{
+        flex-direction: column; /*Поменяй очередность, сперва фотка, затем текст*/
+    }
+    .nav-link{
+        margin-left: 0;
+        margin-bottom: 10px;
+
     }
 }
