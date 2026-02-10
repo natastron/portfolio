@@ -1,411 +1,52 @@
 *{
     box-sizing: border-box;
 }
-body{  
-  font-family: "Inter", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
+.header{
+height: 124px;
+    border: 1px solid red;
+
 }
-.header-strong,
-.nav-link.active {
-  font-weight: 700;
+.header-box{
+    border: 1px solid #000;
+    height: 100%;
+    display: flex; /*делает поведение блоков уникальным*/
+    align-items: center;/*текст по центру сверху и снизу отступы одинаковые*/
+    justify-content: space-between;/*элементы по краям контейнера слева и справа*/
+
 }
-.navbar{
-    padding-top: 40px; /*отступ сверху 40px*/
-    display:flex;
-align-items: center;
-justify-content: space-between;
+.logo{
+max-width: 100px;
+max-height: 36px;
 }
-.nav-list{
-    display: flex;
-    align-items: center;
-    list-style: none;
-    padding: 0;
+.logo img{
+   width: 100%; 
 }
-.nav-link{
-    text-decoration: none;
-    color:#BF7506;
-    margin-left:24px; 
-width: 66px;
-height: 24px;
+.footer{
+    height: 156px;
 }
-.nav-link.active{
-    font-weight: 700;
+.footer-box{
+  border: 1px solid #000;
+    height: 100%;
+    display: flex; /*делает поведение блоков уникальным*/
+    align-items: center;/*текст по центру сверху и снизу отступы одинаковые*/
+    justify-content: space-between;/*элементы по краям контейнера слева и справа*/  
+
+}
+.footer-nav{
+    flex: 1;/*которое заставляет элемент растягиваться и занимать все доступное пространство. */
+}
+.body{
+    margin: 0; /*отступ за контейнером*/
+    padding: 0;/*отступ в контейнере*/
+}
+.main{
+
 }
 .container{
-    max-width: 860px;
-    width: 100%;
-    margin:auto;
-}
-.header{
-    display: flex;
-    align-items: center;
-    padding: 70px 0px;
-}
-.header-text{
-    margin-left: 27px;
-
-}
-.header-strong{
-font-weight: 700;
-line-height: 125%;
-font-size: 48px;
-}
-.header-heading{
-font-size: 24px;
-font-weight: 700;
-line-height: 135%;
-text-align: left;
-margin-top: 8px;
-margin-bottom: 24px;
-}
-.header-primary{
-    color:rgba(191, 117, 6, 1)
-}
-.social-list{
-    list-style-type: none;
-    display: flex;
-    padding: 0;
-    align-items: center;
-}
-.social-link{
-    display: inline-block;
-    padding: 8px;
-}
-.header-links{
-    display: flex;
-    align-items: center;
-}
-.cv-download{
-    margin-left: 55px;
-    display: flex;
-    padding: 7px 8px;
-    align-items: center;
-    text-decoration: none;
-width: 179px;
-height: 40px;
-color: rgba(33, 27, 18, 1);
-line-height: 150%;
-font-size: 16px;
-border-bottom: 2px solid #BF7506;
-}
-.sv-icon{
-    margin-right: 4px;
-}
-.section-heading{
-color:  rgba(191, 117, 6, 1);
-font-size: 48px;
-font-weight: 700;
-line-height: 125%;
-letter-spacing:-0.03em;
-}
-.card{
-    max-width: 400px;
-    margin-bottom: 40px;
-}
-.card-text{
-color: var(--Neutral/900, rgba(33, 27, 18, 1));
-font-family: Inter;
-font-style: Regular;
-font-size: 16px;
-font-weight: 400;
-line-height: 150%;
-letter-spacing: 0%;
-text-align: left; 
-}
-.card-text-wrapper{
-    padding: 16px;
-}
-.card-title{
-color: rgba(191, 117, 6, 1);
-font-family: Inter;
-font-style: Bold;
-font-size: 24px;
-font-weight: 700;
-line-height: 135%;
-letter-spacing: -0.02em;
-text-align: left;
-margin-top: 0;
-margin-bottom: 8px;
-
-}
-.tags{
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    margin-bottom: 16px;
-    margin-top: 8px;
-}
-.tag{
-padding: 8px 4px;
-display: inline-block;
-text-decoration: none;
-color:  rgba(33, 27, 18, 1);
-font-size: 12px;
-font-weight: 400;
-line-height: 150%;
-letter-spacing: 0;
-text-align: left;
-box-sizing: border-box;
-border: 1px solid rgba(221, 156, 60, 1);
-border-radius: 4px;
-background: rgba(255, 255, 255, 1);
-margin-right: 4px; /*отступ справа*/
-margin-bottom: 4px; /*отступ снизу*/
-}
-.card-buttons{
-    display: flex;
-    align-items: center;
-}
-.card-button{
-display: flex;
-align-items: center;
-padding: 7px 8px;
-text-decoration: none;
-font-weight: 700;
-color: rgba(33, 27, 18, 1);
-font-size: 16px;
-line-height: 150%;
-border-bottom: 2px solid #BF7506;
-margin-right: 25px;
-}
-.card-button-icon{
-    margin-right: 4px;
-}
-.cards{
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-}
-.card-image{
-    max-width: 100%; /*чтоб картинка не вываливалась из размеров карточек*/
-}
-.developer{
-    display: flex;/*чтоб текст находился справа, а картинка слева*/
-    align-items: center;
-    padding: 80px 0 20px;
-
-}
-.developer-photo{
-width: 360px; /* ширина*/
-height: 440px; /*высота*/ 
-flex-shrink: 0; /*Чтоб картинка не уменьшалась*/
-object-fit: cover; /*Чтоб картинку не плющело*/
-border-radius: 20px; /*Скругление углов на 20px*/
-} 
-.developer-about{
-    margin-left: 55px; /*текст отступает от картинки на 55px*/
-
-}
-.developer-hello{
-width: 454px;
-height: 32px;
-color:  rgba(33, 27, 18, 1);
-font-size: 24px;
-font-weight: 400;
-line-height: 135%;
-letter-spacing: -2%;
-text-align: left;
-}
-.developer-title{
-width: 454px;
-height: 40px;
-color:  rgba(191, 117, 6, 1);
-font-size: 32px;
-font-weight: 700;
-line-height: 125%;
-text-align: left;/*выравнивает текст в контейнере СЛЕВА!*/
-margin-bottom: 4px;/* отступ снизу элемента 4px*/
-margin-top: 4px;/*отступ сверху элемента 4px*/
-}
-.developer-text{
-color: var(--Neutral/900, rgba(33, 27, 18, 1));
-font-size: 16px;
-line-height: 150%;
-text-align: left;
-}
-.motto{
-color:  rgba(221, 156, 60, 1);
-font-size: 24px;
-line-height: 150%;
-text-align: left;
-margin: 16px 0;/* отступ снизу элемента 16px по краям 0*/
-}
-.developer-sign{
-    max-width: 200px; /*Ширина 200px*/
-}
-.skills{
- margin-top: 20px;
-margin-bottom: 3px;
-}
-.skill-title{
-color: var(--Neutral/900, rgba(33, 27, 18, 1));
-font-size: 24px;
-font-weight: 700;
-line-height: 135%;
-text-align: left;
-}
-.feedback{
-    position: relative; /*Когда нам нужно сдвинуть элемент выше нижевправо влево, но при этом другие элементы находятся на своих местах, далее используется, для самого элемента position: absolute и затем указываем где именно должна стоять в нашем случае справа top/left/right/bottom*/
-    padding: 80px 0 160px;
-}
-.feedback-hand{
-    position: absolute;/**/
-    right: 0;
-    width: 30%;
-    top: 30%;
-
-}
-.input-group{
-    position: relative; /**/
-    margin-bottom: 24px;
-    padding-top: 9px;
-
-}
-.input-label{
-position: absolute;
-color: rgba(131, 128, 124, 1);
-font-size: 16px;
-font-weight: 400;
-line-height: 150%;
-text-align: left;
-padding: 0 8px;/*сверху 0 отступ, по бокам 8px*/
-background: rgba(255, 255, 255, 1);
-top: 0;
-left: 16px;
-}
-
-.input{
-box-sizing: border-box;
-border: 3px solid var(--Neutral/100, rgba(224, 222, 220, 1));
-border-radius: 4px;
-width: 100%;
-height: 67px;
-}
-.textarea{
-    min-height: 140px;
-}
-.form-container{
-    max-width: 435px;
-    margin: auto;
-
-}
-.submit-button{
-display: flex;
-padding: 7px 8px;
-align-items: center;
-text-decoration: none;
-width: 179px;
-height: 40px;
-color: rgba(33, 27, 18, 1);
-border: none;
-line-height: 150%;
-font-size: 16px;
-border-bottom: 2px solid #BF7506;
-background-color: #fff;
-cursor: pointer;
-}
-.button-group{
-    display: flex;
-    justify-content: flex-end;
-}
-.from{
-    color: rgba(131, 128, 124, 1);
-font-size: 16px;
-font-weight: 400;
-line-height: 150%;
-letter-spacing: 0%;
-text-align: center;
-}
-.feedback-title{
-    margin-top: 120px;
-}
-@media(max-width: 1024px){
-    .container{
-    max-width: 760px
-    }
-    .card{
-        max-width: 350px;
-    }
-}
-@media(max-width:790px ){
-    .container{
-    max-width: 550px
-    }
-    .card{
-        max-width: 350px;
-    }
-    .header-photo{
-        max-width: 200px;
-    }
-    .header-strong{
-        font-size: 36px;
-    }
-    .header-heading{
-        font-size: 16px;
-
-    }
-    .cv-download{
-        margin-left: 15px;
-    }
-    .card{
-        max-width: 45%;
-    }
-    .card-text-wrapper{
-        padding: 8px 0;
-    }
-    .developer{
-        flex-direction: column; /*Поменяй очередность, сперва фотка, затем текст*/
-    }
-    .developer-photo{
-        width: 75%;
-        height: 350px;
-        margin-bottom: 30px;
-    }
-    .developer-about{
-        padding-left: 15px;
-    }
-    .feedback-hand{
-        display: none;
-    }
-}
-@media(max-width:620px ){
-    .container{
-    max-width: 90%
-    }
-    .navbar, .cards, .header-links {
-        flex-direction: column /*Поменяй очередность, сперва фотка, затем текст*/
-    }
-    header{
-        padding-top: 33px;
-       flex-direction: column; /*Поменяй очередность, сперва фотка, затем текст*/
-       text-align: center; /*текст по центру*/ 
-    }
-    .cards{
-        gap: 30px;
-    }
-    .cv-download{
-        margin-left: 0;
-    }
-    .tags{
-        flex-wrap: wrap;/*перенеси на новую строчку*/
-    }
-    .card{
-        max-width: 100%;
-    }
-}
-@media(max-width:480px ){
-    .from{
-        width: 90%;
-    }
-    .nav-list{
-        flex-direction: column; /*Поменяй очередность, сперва фотка, затем текст*/
-    }
-    .nav-link{
-        margin-left: 0;
-        margin-bottom: 10px;
-
-    }
+    max-width: 1230px;
+    flex: center;
+    margin: 0px auto; /* auto делает так чтоб отступ слева и права были одинаковыми*/
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 100%;
 }
